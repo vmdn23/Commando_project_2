@@ -10,6 +10,6 @@ File|Task
 
 
 ## Author
-Alex Allen
-Becky Chen
-Victor Nguyen
+Alex Allen \n
+Becky Chen \n
+Victor Nguyen \n
