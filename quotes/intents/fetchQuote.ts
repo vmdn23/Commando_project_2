@@ -9,9 +9,9 @@ export default class FetchQuoteIntent {
   
   static action(context: TnoAuthContext, params: any, body: any, callback: TFetchDataCallback) {
     //... your code goes here
-    Client(context.authAccess.accessToken).get('/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=mycallback')
-      .then(({ data }) => {
-        callback({ data })
+    Client(context.authAccess.accessToken).get('/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1')
+      .then(({ data[0] }) => {
+        callback({ data : [response.data]})
       })
       .catch(error => {
       	callback({ error: error.toString() })
